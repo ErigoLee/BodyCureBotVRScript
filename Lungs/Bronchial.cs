@@ -69,7 +69,8 @@ public class Bronchial : MonoBehaviour
             GrabDetector grabDetector = detector.GetComponent<GrabDetector>();
             if (leftHand.insideObject && grabDetector.GetInLeft())
             {
-                if (gestureRecongizedLeft.GetCanGrabbing() && (gestureRecongizedLeft.GetGestureLeftName().Equals("Left_rock_v1") || gestureRecongizedLeft.GetGestureLeftName().Equals("Left_rock_v2")))
+                if (gestureRecongizedLeft.GetCanGrabbing() && (gestureRecongizedLeft.GetGestureLeftName().Equals("Left_rock_v1") 
+                || gestureRecongizedLeft.GetGestureLeftName().Equals("Left_rock_v2")))
                 {
                     leftHand.AddCandidates(grabbable);
                 }
@@ -78,7 +79,8 @@ public class Bronchial : MonoBehaviour
 
             if (rightHand.insideObject && grabDetector.GetInRight())
             {
-                if (gestureRecongizedRight.GetCanGrabbing() && (gestureRecongizedRight.GetGestureRightName().Equals("Right_rock_v1") || gestureRecongizedRight.GetGestureRightName().Equals("Right_rock_v2")))
+                if (gestureRecongizedRight.GetCanGrabbing() && (gestureRecongizedRight.GetGestureRightName().Equals("Right_rock_v1") 
+                || gestureRecongizedRight.GetGestureRightName().Equals("Right_rock_v2")))
                 {
                     rightHand.AddCandidates(grabbable);
                 }
