@@ -50,19 +50,14 @@ public class ChaseState : FSMState
                 {
                     Vector3 avoidDist = npc.position - friends[i].transform.position;
                     //단위벡터화
-                    //direct += avoidDist;
                     direct += avoidDist / (avoidDist.sqrMagnitude);
-                    //avoidDist = avoidDist / (avoidDist.sqrMagnitude);
-                    //npc.Translate(avoidDist * friendPull);
                 }
             }
         }
 
-
         destPos += direct;
         Quaternion targetRotation = Quaternion.LookRotation(destPos - npc.position);
         npc.rotation = Quaternion.Slerp(npc.rotation, targetRotation, Time.deltaTime * curRotSpeed);
-        //npc.Translate(Vector3.forward * curSpeed * Time.deltaTime);
         npc.Translate(Vector3.forward * Time.deltaTime * curSpeed + direct * friendPull * Time.deltaTime);
     }
 
