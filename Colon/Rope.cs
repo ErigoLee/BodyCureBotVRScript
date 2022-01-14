@@ -151,7 +151,7 @@ public class Rope : MonoBehaviour
             {
                 spherebody.detectCollisions = false;
             }
-            //스크립트 추가
+            //add OVRGrabbable, AjustGrabbable, GrabDetector and Collider component 
             segments[i].AddComponent<OVRGrabbable>();
             segments[i].AddComponent<AdjustGrabbable>();
 
