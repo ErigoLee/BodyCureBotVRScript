@@ -439,23 +439,6 @@ public class Rope : MonoBehaviour
         detector.SetActive(false);
         gestureRecongizedLeft.CanGrabbingTurnOff();
         gestureRecongizedRight.CanGrabbingTurnOff();
-        /*
-        if (leftHand.insideObject)
-        {
-            if(leftHand.isGrabbing)
-            {       
-                leftHand.GrabFinish();
-            }
-        }
-        if(rightHand.insideObject)
-        {
-            
-            if(rightHand.isGrabbing)
-            {
-                rightHand.GrabFinish();
-            }
-        }
-        */
         leftHand.GrabFinish();
         rightHand.GrabFinish();
         leftHand.InsideObjectTurnOff();
